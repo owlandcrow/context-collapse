@@ -1,5 +1,10 @@
 FROM kovarcodes/elmonarm:latest
 
+WORKDIR /code
+
+RUN apt-get -y install npm
+RUN npm install -g uglifyjs
+
 # start with dependencies to enjoy caching
 COPY ./elm.json /code/elm.json
 COPY ./src/Test.elm /code/src/Test.elm
