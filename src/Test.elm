@@ -5,10 +5,10 @@ module Test exposing (main)
 
 import Browser
 import Html
-main : Program () Model Msg
+main : Program () ()()
 main =
     Browser.sandbox
         { init = ()
-        , view = Html.div [] []
+        , view = \() -> Html.div [] []
         , update = \() () -> ()
         }
