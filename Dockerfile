@@ -1,6 +1,4 @@
-FROM codesimple/elm:0.19
-
-WORKDIR /code
+FROM kovarcodes/elmonarm:latest
 
 # start with dependencies to enjoy caching
 COPY ./elm.json /code/elm.json
