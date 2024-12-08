@@ -1,10 +1,4 @@
-FROM node:lts
-
-RUN npm install uglify-js -g
-RUN curl -sL https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz -o /tmp/elm.gz &&\
-    gunzip /tmp/elm.gz &&\
-    mv /tmp/elm /usr/local/bin/elm &&\
-    chmod +x /usr/local/bin/elm
+FROM codesimple/elm:0.19
 
 WORKDIR /code
 
