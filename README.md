@@ -5,7 +5,7 @@
 The easiest way to get started is to download the latest release and
 use the included script to start a webserver.
 
-    wget https://github.com/avocado-productions/context-collapse/releases/download/v0.0.3/context-collapse-prebuilt.tgz
+    curl -L https://github.com/owlandcrow/context-collapse/releases/download/v0.0.4/context-collapse-prebuilt.tgz > context-collapse-prebuilt.tgz
     tar xzvf context-collapse-prebuilt.tgz
     cd context-collapse
     python3 server.py
@@ -21,7 +21,7 @@ refresh when you change the script.
 You'll need to have a stable internet connection in order for the elm build
 script to download all its dependencies and compile successfully.
 
-    git clone git@github.com:avocado-productions/context-collapse
+    git clone git@github.com:owlandcrow/context-collapse
     cd context-collapse
     elm make src/Controller.elm --output=dist/avocomm.js --optimize
 
@@ -29,7 +29,7 @@ For an debug build, replace `--optimize` in the last command with `--debug`.
 To compress the result according to the recommendations
 [here](https://guide.elm-lang.org/optimization/asset_size.html), run the following:
 
-    uglifyjs dist/avocomm.js --compress 'pure_funcs=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9],pure_getters,keep_fargs=false,unsafe_comps,unsafe' | uglifyjs --mangle --output dist/avocomm.min.js
+    npx uglify-js dist/avocomm.js --compress 'pure_funcs=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9],pure_getters,keep_fargs=false,unsafe_comps,unsafe' | npx uglify-js --mangle --output dist/avocomm.min.js
     mv dist/avocomm.min.js dist/avocomm.js
 
 ## Creating a release
