@@ -1,5 +1,7 @@
 # Context Collapse
 
+You can interact with the demo script at https://context.hyperkind.org
+
 ## Running the engine
 
 The easiest way to get started is to download the latest release and
